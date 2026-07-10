@@ -1,0 +1,21 @@
+@use '@/app/styles/mixins' as *;
+@use '@/app/styles/variables' as *;
+
+.overlay {
+  @include flex-center;
+  position: fixed;
+  background: $color-overlay;
+  backdrop-filter: blur(3px);
+  padding: $space-6;
+  z-index: 100;
+}
+
+.modal {
+  background: $color-surface;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  min-width: 440px;
+  max-height: 85vh;
+  padding: $space-8;
+  outline: none;
+}

@@ -1,0 +1,28 @@
+@use '@/app/styles/variables' as *;
+@use '@/app/styles/mixins' as *;
+
+.badge {
+  @include flex-center;
+  padding: 3px 10px;
+  border-radius: $radius-full;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  line-height: $line-height-base;
+
+  &--neutral {
+    background: $color-surface;
+    color: $color-text-muted;
+    border: 1px solid $color-border;
+  }
+
+  &--active {
+    background: $color-success;
+    color: $color-success-light;
+  }
+
+  &--inactive {
+    background: $color-danger;
+    color: $color-danger-light;
+  }
+}
