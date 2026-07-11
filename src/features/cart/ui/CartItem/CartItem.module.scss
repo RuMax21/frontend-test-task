@@ -1,0 +1,90 @@
+@use '@/app/styles/mixins' as *;
+@use '@/app/styles/variables' as *;
+
+.item {
+  @include flex-between;
+  gap: $space-3;
+  padding: $space-3 0;
+  border-bottom: 1px dashed $color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+  }
+
+  &__btn {
+    @include flex-center;
+    width: 20px;
+    height: 20px;
+    border-radius: $radius-sm;
+    border: 1px solid $color-border;
+    background: $color-primary;
+    cursor: pointer;
+    line-height: 1;
+    transition:
+      border-color $transition-fast,
+      color $transition-fast;
+
+    &:hover:not(:disabled) {
+      border-color: $color-primary-hover;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__value {
+    font-size: $font-size-xs;
+    min-width: 14px;
+    text-align: center;
+  }
+
+  &__aside {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+  }
+
+  &__price {
+    font-size: $font-size-sm;
+    white-space: nowrap;
+  }
+
+  &__remove {
+    @include flex-center;
+    width: 22px;
+    height: 22px;
+    border-radius: $radius-full;
+    border: none;
+    cursor: pointer;
+    font-size: $font-size-base;
+    line-height: 1;
+    background: $color-primary-hover;
+    transition:
+      background-color $transition-fast,
+      color $transition-fast;
+
+    &:hover {
+      background: $color-primary;
+    }
+  }
+}

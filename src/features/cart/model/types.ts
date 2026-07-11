@@ -14,3 +14,16 @@ export interface CartState {
   items: CartItem[];
   lastRemoved: RemovedCartEntry | null;
 }
+
+export interface CartPanelProps {
+  items: CartItem[];
+  total: number;
+  onQuantityChange: (id: number, quantity: number) => void;
+  onRemove: (id: number) => void;
+}
+
+export interface CartItemProps {
+  item: CartItem;
+  onQuantityChange: (id: number, quantity: number) => void;
+  onRemove: (id: number) => void;
+}
