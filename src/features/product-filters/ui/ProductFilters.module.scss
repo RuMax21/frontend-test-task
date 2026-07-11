@@ -1,0 +1,17 @@
+@use '@/app/styles/variables' as *;
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: $space-8;
+  align-items: flex-end;
+  margin-bottom: $space-8;
+
+  &__search {
+    max-width: 440px;
+  }
+
+  &__category {
+    max-width: 220px;
+  }
+}
