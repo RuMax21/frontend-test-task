@@ -1,4 +1,4 @@
-import { createApi, fakeBaseQuery } from '@reduxjs/toolkit/query';
+import { createApi, fakeBaseQuery } from '@reduxjs/toolkit/query/react';
 import { fetchCategories } from './mockServer';
 import type { Category } from '../model';
 
