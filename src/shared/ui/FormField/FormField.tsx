@@ -5,10 +5,11 @@ export function FormField({
   label,
   error,
   type = 'text',
+  className,
   ...inputProps
 }: FormFieldProps) {
   return (
-    <div className={styles.field}>
+    <div className={`${styles.field} ${className}`}>
       <label className={styles.label}>{label}</label>
       <input
         className={`${styles.input} ${error ? styles.inputError : ''}`}

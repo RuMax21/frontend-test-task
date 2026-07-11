@@ -1,5 +1,6 @@
 @use '@/app/styles/variables' as *;
 @use '@/app/styles/mixins' as *;
+@use 'sass:color';
 
 .field {
   display: flex;
@@ -37,7 +38,7 @@
   }
 
   &:hover {
-    border-color: darken($color-border, 10%);
+    border-color: color.adjust($color-border, $lightness: -10%);
   }
 
   &:focus {

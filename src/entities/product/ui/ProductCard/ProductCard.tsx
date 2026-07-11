@@ -18,7 +18,12 @@ export function ProductCard({
       </div>
       <div className={styles.card__footer}>
         <span className={styles.card__price}>{product.price}</span>
-        <Button onClick={() => onAddToCart(product)}>В корзину</Button>
+        <Button
+          className={styles.card__btn}
+          onClick={() => onAddToCart(product)}
+        >
+          В корзину
+        </Button>
       </div>
     </article>
   );

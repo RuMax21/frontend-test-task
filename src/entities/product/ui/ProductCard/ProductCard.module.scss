@@ -52,4 +52,9 @@
     font-weight: $font-weight-semibold;
     font-size: $font-size-md;
   }
+
+  &__btn {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+  }
 }
