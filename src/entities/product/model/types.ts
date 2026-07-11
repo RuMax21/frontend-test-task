@@ -4,3 +4,9 @@ export interface Product {
   price: number;
   categoryId: string;
 }
+
+export interface ProductCardProps {
+  product: Product;
+  categoryLabel: string;
+  onAddToCart: (product: Product) => void;
+}

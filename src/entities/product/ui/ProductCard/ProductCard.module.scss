@@ -1,0 +1,55 @@
+@use '@/app/styles/mixins' as *;
+@use '@/app/styles/variables' as *;
+
+.card {
+  @include card;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  padding: $space-4;
+  gap: $space-3;
+  transition:
+    box-shadow $transition-base,
+    transform $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2);
+  }
+
+  &__thumb {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: $radius-sm;
+    border: 1px solid $color-border;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+  }
+
+  &__title {
+    font-size: $font-size-base;
+    margin: 0 0 $space-1;
+  }
+
+  &__footer {
+    @include flex-between;
+    margin-top: auto;
+    padding-top: $space-2;
+  }
+
+  &__price {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-md;
+  }
+}
