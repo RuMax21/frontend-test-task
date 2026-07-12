@@ -1,0 +1,72 @@
+@use '@/app/styles/mixins' as *;
+@use '@/app/styles/variables' as *;
+
+.card {
+  @include card;
+  position: relative;
+  padding: $space-4;
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  transition:
+    box-shadow $transition-base,
+    transform $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+
+  &__remove {
+    @include flex-center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: $radius-full;
+    border: none;
+    cursor: pointer;
+    font-size: $font-size-base;
+    background: $color-primary;
+    transition: background-color $transition-fast;
+
+    &:hover {
+      background: $color-primary-hover;
+    }
+  }
+
+  &__avatar {
+    @include flex-center;
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-full;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-base;
+    color: $color-primary;
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+
+  &__name {
+    font-size: $font-size-base;
+  }
+
+  &__role {
+    margin: 0;
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+  }
+
+  &__footer {
+    @include flex-between;
+    margin-top: auto;
+    padding-top: $space-2;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+  }
+}

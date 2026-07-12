@@ -8,3 +8,9 @@ export interface User {
   status: UserStatus;
   bio?: string;
 }
+
+export interface UserCardProps {
+  user: User;
+  onOpenDetail: (user: User) => void;
+  onRemove: (id: string) => void;
+}
