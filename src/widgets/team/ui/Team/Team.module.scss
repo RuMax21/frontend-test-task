@@ -1,0 +1,17 @@
+@use '@/app/styles/variables' as *;
+@use '@/app/styles/mixins' as *;
+
+.team {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+  margin-top: $space-8;
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: $space-5;
+    align-items: start;
+  }
+}
