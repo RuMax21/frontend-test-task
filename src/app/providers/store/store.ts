@@ -1,6 +1,6 @@
 import { categoryApi } from '@/entities/category/api';
 import { productApi } from '@/entities/product/api';
-import { productsReducer } from '@/entities/product/model';
+import { productsReducer } from '@/features/product-filters/model';
 import { cartReducer, type CartItem } from '@/features/cart/model';
 import { CART_STORAGE_KEY } from '@/features/cart/model/constants';
 import { cartListener } from '@/features/cart/model/listener';

@@ -1,7 +1,7 @@
 export {
   setSearch,
   setCategory,
-  hybridFilters,
+  hydrateFilters,
   productsReducer,
 } from './slice';
 export {

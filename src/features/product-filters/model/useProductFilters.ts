@@ -1,6 +1,7 @@
 import { useAppDispatch, useAppSelector } from '@/app/providers/store';
 import { selectCategory, selectSearch } from './selectors';
-import { setCategory, setSearch } from './slice';
+import { hydrateFilters, setCategory, setSearch } from './slice';
+import type { ProductFilterState } from './types';
 
 export function useProductFilters() {
   const dispatch = useAppDispatch();
@@ -12,5 +13,7 @@ export function useProductFilters() {
     category,
     setSearch: (value: string) => dispatch(setSearch(value)),
     setCategory: (value: string) => dispatch(setCategory(value)),
+    hydrateFilters: (value: ProductFilterState) =>
+      dispatch(hydrateFilters(value)),
   };
 }
