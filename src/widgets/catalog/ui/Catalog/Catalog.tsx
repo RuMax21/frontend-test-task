@@ -8,6 +8,7 @@ import { useCart } from '@/features/cart/model';
 import { ProductGrid } from '../ProductGrid';
 import { ProductFilters } from '@/features/product-filters/ui';
 import { useProductFilters } from '@/features/product-filters/model/useProductFilters';
+import { useCartRemovalToast } from '@/features/cart/model';
 
 export function Catalog() {
   useGetProductsQuery();
@@ -16,6 +17,8 @@ export function Catalog() {
   const products = useAppSelector(selectFilteredProducts);
   const cart = useCart();
   const filters = useProductFilters();
+
+  useCartRemovalToast();
 
   return (
     <section className={styles.catalog}>
