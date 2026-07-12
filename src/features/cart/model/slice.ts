@@ -45,9 +45,17 @@ const cartSlice = createSlice({
       state.items.splice(index, 0, item);
       state.lastRemoved = null;
     },
+    cleatLastRemoved(state) {
+      state.lastRemoved = null;
+    },
   },
 });
 
-export const { addToCart, changeQuantity, removeFromCart, undoRemoveFromCart } =
-  cartSlice.actions;
+export const {
+  addToCart,
+  changeQuantity,
+  removeFromCart,
+  undoRemoveFromCart,
+  cleatLastRemoved,
+} = cartSlice.actions;
 export const cartReducer = cartSlice.reducer;
