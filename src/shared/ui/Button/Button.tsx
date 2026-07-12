@@ -5,11 +5,12 @@ export const Button = ({
   className,
   children,
   disabled = false,
+  size,
   onClick,
   ...props
 }: ButtonProps) => (
   <button
-    className={`${styles.button} ${className}`}
+    className={`${styles.button} ${className} ${size ? styles[`button--${size}`] : ''}`}
     onClick={onClick}
     disabled={disabled}
     {...props}
