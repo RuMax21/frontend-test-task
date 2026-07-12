@@ -1,0 +1,15 @@
+@use '@/app/styles/variables' as *;
+@use '@/app/styles/mixins' as *;
+
+.empty {
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+  padding: $space-6 0;
+}
+
+.grid {
+  @include container;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-4;
+}
