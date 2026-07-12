@@ -1,0 +1,42 @@
+@use '@/app/styles/variables' as *;
+@use '@/app/styles/mixins' as *;
+
+.nav {
+  border-bottom: 1px solid $color-border;
+  background: $color-surface;
+
+  &__inner {
+    @include container;
+    @include flex-between;
+    margin: 0 auto;
+    padding: $space-4 $space-6;
+  }
+
+  &__title {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-lg;
+    color: $color-text;
+  }
+
+  &__links {
+    display: flex;
+    gap: $space-2;
+  }
+
+  &__link {
+    padding: 8px 14px;
+    border-radius: $radius-sm;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text-muted;
+    text-decoration: none;
+    transition:
+      background-color $transition-fast,
+      color $transition-fast;
+
+    &:hover {
+      background: $color-surface;
+      color: $color-text-secondary;
+    }
+  }
+}

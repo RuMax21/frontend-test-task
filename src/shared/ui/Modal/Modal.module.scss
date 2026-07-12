@@ -4,6 +4,7 @@
 .overlay {
   @include flex-center;
   position: fixed;
+  inset: 0;
   background: $color-overlay;
   backdrop-filter: blur(3px);
   padding: $space-6;

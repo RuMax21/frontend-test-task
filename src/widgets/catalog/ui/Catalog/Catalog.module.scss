@@ -5,6 +5,7 @@
   @include container;
   display: flex;
   flex-direction: column;
+  margin-top: $space-8;
 
   &__layout {
     display: grid;

@@ -1,5 +1,3 @@
-import { useCartRemovalToast } from './useCartRemovalToast';
-
 export * from './types';
 export {
   addToCart,

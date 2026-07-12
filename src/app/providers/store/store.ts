@@ -6,6 +6,7 @@ import { CART_STORAGE_KEY } from '@/features/cart/model/constants';
 import { cartListener } from '@/features/cart/model/listener';
 import { readFromStorage } from '@/shared/lib';
 import { configureStore } from '@reduxjs/toolkit';
+import { userApi } from '@/entities/user/api';
 
 export const store = configureStore({
   reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
     cart: cartReducer,
     [productApi.reducerPath]: productApi.reducer,
     [categoryApi.reducerPath]: categoryApi.reducer,
+    [userApi.reducerPath]: userApi.reducer,
   },
   preloadedState: {
     cart: {
@@ -23,7 +25,11 @@ export const store = configureStore({
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware()
       .prepend(cartListener.middleware)
-      .concat(productApi.middleware, categoryApi.middleware),
+      .concat(
+        productApi.middleware,
+        categoryApi.middleware,
+        userApi.middleware,
+      ),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
