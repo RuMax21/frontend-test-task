@@ -14,3 +14,8 @@ export interface UserCardProps {
   onOpenDetail: (user: User) => void;
   onRemove: (id: string) => void;
 }
+
+export interface UserModalProps {
+  user: User | null;
+  onClose: () => void;
+}
