@@ -13,3 +13,11 @@
     align-items: start;
   }
 }
+@media (max-width: 1200px) {
+  .catalog {
+    &__layout {
+      grid-template-columns: 1fr;
+      gap: $space-6;
+    }
+  }
+}

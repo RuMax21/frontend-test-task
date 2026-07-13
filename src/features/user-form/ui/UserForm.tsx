@@ -55,7 +55,6 @@ export function UserForm({ onCreate }: UserFormProps) {
       <FormSelect
         options={statusOptions}
         label="Статус"
-        error={errors.status}
         {...register('status')}
       />
 
